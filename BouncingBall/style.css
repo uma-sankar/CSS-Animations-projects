@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+}
+.main {
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.ball {
+  width: 150px;
+  height: 150px;
+  background-color: teal;
+  border-radius: 50%;
+  background-image: radial-gradient(circle at 40px 48px, slateblue, #000);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+
+  animation: bounce 1s infinite;
+}
+.shadow {
+  width: 120px;
+  height: 10px;
+  background-color: rgba(0, 0, 0, 0.1);
+
+  border-radius: 50%;
+  transform: translateY(300px);
+  animation: shadow-drop 0.5s infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+    animation-timing-function: ease-in-out;
+  }
+  30% {
+    width: 150px;
+    height: 150px;
+  }
+  50% {
+    transform: translateY(300px);
+    width: 200px;
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes shadow-drop {
+  from {
+    width: 50px;
+  }
+  to {
+    width: 100px;
+  }
+}
