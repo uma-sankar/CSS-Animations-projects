@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  min-height: 100vh;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.circle {
+  width: 10px;
+  height: 10px;
+  border: 5px solid rgba(255, 94, 0, 0.9);
+  border-radius: 50%;
+  animation: expand 1s linear infinite;
+}
+
+@keyframes expand {
+  0% {
+    width: 10px;
+    height: 10px;
+    opacity: 1;
+  }
+  25% {
+    width: 20px;
+    height: 20px;
+    opacity: 0.8;
+  }
+  50% {
+    width: 30px;
+    height: 30px;
+    opacity: 0.6;
+  }
+  75% {
+    width: 40px;
+    height: 40px;
+    opacity: 0.4;
+  }
+  100% {
+    width: 50px;
+    height: 50px;
+    opacity: 0.2;
+  }
+}
